@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection Dashboard</title>
+    <!-- Link to styles.css -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Chart.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Link to external JavaScript -->
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Fraud Detection</h2>
+            <nav>
+                <ul>
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="transaction_analysis.html">Transaction Analysis</a></li>
+                    <li><a href="reports_logs.html">Reports & Logs</a></li>
+                    <li><a href="system_settings.html">System Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Dashboard -->
+        <main class="dashboard">
+            <!-- Header -->
+            <header>
+                <h1>Real-Time Fraud Detection Dashboard</h1>
+                <div class="status">
+                    <span>Status: <strong>Online</strong></span>
+                </div>
+            </header>
+
+            <!-- Interactive Card Section -->
+            <section id="card-section">
+                <div class="card" id="overview-card">
+                    <h3>Overview</h3>
+                    <p>Monitor all transaction patterns and system health.</p>
+                </div>
+                <div class="card" id="transaction-card">
+                    <h3>Transaction Analysis</h3>
+                    <p>Analyze transactions and identify fraudulent activities.</p>
+                </div>
+                <div class="card" id="reports-card">
+                    <h3>Reports & Logs</h3>
+                    <p>Access reports and detailed transaction logs.</p>
+                </div>
+                <div class="card" id="settings-card">
+                    <h3>System Settings</h3>
+                    <p>Manage fraud detection system settings and configurations.</p>
+                </div>
+            </section>
+
+            <!-- Transaction Volume Chart -->
+            <section id="overview" class="chart-section">
+                <h2>Transaction Volume</h2>
+                <canvas id="transactionChart"></canvas>
+            </section>
+
+            <!-- Suspicious Transactions Table -->
+            <section id="transactions" class="table-section">
+                <h2>Suspicious Transactions</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>User</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactionTableBody">
+                        <!-- Dynamically populated rows will go here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Alerts Panel -->
+            <section id="alerts" class="alerts-section">
+                <h2>Alerts</h2>
+                <div class="alert">
+                    <p>Transaction 12345 flagged for suspicious activity.</p>
+                    <button>Review</button>
+                </div>
+                <div class="alert">
+                    <p>Account 67890 frozen due to multiple failed logins.</p>
+                    <button>Review</button>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Settings - Fraud Detection Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Fraud Detection</h2>
+            <nav>
+                <ul>
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="transaction_analysis.html">Transaction Analysis</a></li>
+                    <li><a href="reports_logs.html">Reports & Logs</a></li>
+                    <li><a href="system_settings.html">System Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Dashboard -->
+        <main class="dashboard">
+            <!-- Header -->
+            <header>
+                <h1>System Settings</h1>
+                <div class="status">
+                    <span>Status: <strong>Online</strong></span>
+                </div>
+            </header>
+
+            <!-- Settings Section -->
+            <section id="system-settings">
+                <h2>Configure System Settings</h2>
+                
+                <!-- Security Settings -->
+                <div class="settings-section">
+                    <h3>Security Settings</h3>
+                    <label for="security-level">Select Security Level:</label>
+                    <select id="security-level">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <!-- Transaction Threshold Settings -->
+                <div class="settings-section">
+                    <h3>Transaction Thresholds</h3>
+                    <label for="transaction-threshold">Flag transactions over:</label>
+                    <input type="number" id="transaction-threshold" value="1000" />
+                    <span>USD</span>
+                </div>
+
+                <!-- Notification Settings -->
+                <div class="settings-section">
+                    <h3>Notification Settings</h3>
+                    <label for="notify-email">Send notifications to:</label>
+                    <input type="email" id="notify-email" placeholder="Enter email" value="admin@paypal.com" />
+                </div>
+
+                <!-- Save Button -->
+                <div class="settings-section">
+                    <button id="save-settings">Save Settings</button>
+                </div>
+            </section>
+
+            <!-- Back to Home Button -->
+            <section>
+                <button onclick="window.location.href='index.html'" class="back-home-btn">Back to Home</button>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

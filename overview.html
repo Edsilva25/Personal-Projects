@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview - Fraud Detection Dashboard</title>
+    <!-- Link to styles.css -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to external JavaScript -->
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Fraud Detection</h2>
+            <nav>
+                <ul>
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="transaction_analysis.html">Transaction Analysis</a></li>
+                    <li><a href="reports_logs.html">Reports & Logs</a></li>
+                    <li><a href="system_settings.html">System Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Dashboard -->
+        <main class="dashboard">
+            <!-- Header -->
+            <header>
+                <h1>Overview</h1>
+                <div class="status">
+                    <span>Status: <strong>Online</strong></span>
+                </div>
+            </header>
+
+            <!-- Overview Content -->
+            <section id="overview-content">
+                <h2>System Overview</h2>
+                <p>Monitor the real-time status of the fraud detection system, including transaction volume and alerts.</p>
+                <div id="data-overview">
+                    <h3>Current Transaction Volume</h3>
+                    <canvas id="overviewChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Suspicious Transactions Section -->
+            <section id="overview-transactions">
+                <h2>Recent Suspicious Transactions</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>User</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TX20231101</td>
+                            <td>User123</td>
+                            <td>$750</td>
+                            <td>Flagged</td>
+                            <td><button>Review</button></td>
+                        </tr>
+                        <tr>
+                            <td>TX20231102</td>
+                            <td>User456</td>
+                            <td>$1200</td>
+                            <td>Under Review</td>
+                            <td><button>Review</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Back to Home Button -->
+            <section>
+                <button onclick="window.location.href='index.html'" class="back-home-btn">Back to Home</button>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

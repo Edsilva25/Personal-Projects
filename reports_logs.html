@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports & Logs - Fraud Detection Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Fraud Detection</h2>
+            <nav>
+                <ul>
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="transaction_analysis.html">Transaction Analysis</a></li>
+                    <li><a href="reports_logs.html">Reports & Logs</a></li>
+                    <li><a href="system_settings.html">System Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Dashboard -->
+        <main class="dashboard">
+            <!-- Header -->
+            <header>
+                <h1>Reports & Logs</h1>
+                <div class="status">
+                    <span>Status: <strong>Online</strong></span>
+                </div>
+            </header>
+
+            <!-- Reports Section -->
+            <section id="reports">
+                <h2>Recent Reports</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Report ID</th>
+                            <th>Generated Date</th>
+                            <th>Report Type</th>
+                            <th>Download</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RPT20231101</td>
+                            <td>2023-11-01</td>
+                            <td>Monthly Fraud Report</td>
+                            <td><a href="#">Download</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Back to Home Button -->
+            <section>
+                <button onclick="window.location.href='index.html'" class="back-home-btn">Back to Home</button>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
